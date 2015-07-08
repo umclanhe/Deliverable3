@@ -17,25 +17,25 @@ import org.openqa.selenium.support.ui.Select;
 
     public class SearchingFunTest {
 	   
-    	WebDriver driver= new FirefoxDriver();
+    	        WebDriver driver= new FirefoxDriver();
 	
 	@Before
 	public void setUp() throws Exception {
-	    driver.get("https://www.amazon.com");
-	    driver.findElement(By.linkText("Sign in")).click();
-	    driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
+	        driver.get("https://www.amazon.com");
+	        driver.findElement(By.linkText("Sign in")).click();
+	        driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
 		driver.findElement(By.id("ap_password")).sendKeys("umc6080");
 		driver.findElement(By.id("signInSubmit-input")).click();
 	}
 
-//	Given I¡¯m signed in
-//  When I choose the option of dropdown list ¡°Books¡± and enter the book name ¡°the little prince¡± and click the button ¡°search¡±
-//  Then I see the book link ¡°The Little Prince¡± displayed on the new page
+// Given IÂ¡Â¯m signed in
+// When I choose the option of dropdown list Â¡Â°BooksÂ¡Â± and enter the book name Â¡Â°the little princeÂ¡Â± and click the button Â¡Â°searchÂ¡Â±
+// Then I see the book link Â¡Â°The Little PrinceÂ¡Â± displayed on the new page
 	
 	@Test
 	public void testQuickSearch() {
 		
-        // select the category Books, enter specific book name and then click search
+// select the category Books, enter specific book name and then click search
 		
 		Select dropdown = new Select(driver.findElement(By.id("searchDropdownBox")));
 		dropdown.selectByValue("search-alias=stripbooks");
@@ -52,14 +52,14 @@ import org.openqa.selenium.support.ui.Select;
 		} 
 	} 
 	
-//	Given I'm signed in
-//	When I choose the option of dropdown list "computers" and enter nothing
-//	Then I see the title "Computers & Accessories" on the new page.
+// Given I'm signed in
+// When I choose the option of dropdown list "computers" and enter nothing
+// Then I see the title "Computers & Accessories" on the new page.
 		
 	@Test
 	public void testAllSearch() {
 		
-        // select the category Computers, enter nothing and then click search
+// select the category Computers, enter nothing and then click search
 		
 		Select dropdown = new Select(driver.findElement(By.id("searchDropdownBox")));
 		dropdown.selectByValue("search-alias=computers");
