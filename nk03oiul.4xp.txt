@@ -1,0 +1,20 @@
+﻿Test creating account
+Test Search Tool
+Test Sign In
+Test Add Items
+Test Remove Items
+Test View Account
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   CreateAccountTest.java
+#	new file:   SearchingFunTest.java
+#	new file:   SignInTest.java
+#	new file:   TestPurchasing.java
+#	new file:   TestUpdateCart.java
+#	new file:   TestViewAccount.java
+#
+
