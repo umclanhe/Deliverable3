@@ -17,13 +17,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestViewAccount {
 
-        WebDriver driver= new FirefoxDriver();
+                WebDriver driver= new FirefoxDriver();
 	
 	@Before
 	public void setUp() throws Exception {
-	    driver.get("https://www.amazon.com");
-	    driver.findElement(By.linkText("Sign in")).click();
-	    driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
+	        driver.get("https://www.amazon.com");
+	        driver.findElement(By.linkText("Sign in")).click();
+	        driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
 		driver.findElement(By.id("ap_password")).sendKeys("umc6080");
 		driver.findElement(By.id("signInSubmit-input")).click();
 	}
@@ -36,10 +36,10 @@ public class TestViewAccount {
 	@Test
 	public void testMyBrowseHistory() {
 		
-        // select the link of my account and click it
+// select the link of my account and click it
 		
 		WebElement mc = driver.findElement(By.linkText("tulipsu's Amazon.com"));
- 	    mc.click();
+ 	        mc.click();
 		
 		WebElement ac = driver.findElement(By.linkText("Your Browsing History"));
 		ac.click();
@@ -60,11 +60,10 @@ public class TestViewAccount {
 	
 	@Test
 	public void testRecommendation() {
-		
-        // select the link of my account and click it
+// select the link of my account and click it
 		
 		WebElement et = driver.findElement(By.linkText("tulipsu's Amazon.com"));
- 	    et.click();
+ 	        et.click();
 		
 		WebElement rt = driver.findElement(By.linkText("Recommended For You"));
 		rt.click();
