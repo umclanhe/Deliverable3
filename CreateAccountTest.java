@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CreateAccountTest {
 	
-	    WebDriver driver = new FirefoxDriver();
+	        WebDriver driver = new FirefoxDriver();
 	
 	//Start at the home page for Amazon for each test
 	    
@@ -32,18 +32,18 @@ public class CreateAccountTest {
 	@Test
 	public void testCreatNewAcct1(){
 		
-		//Enter user's name
-	    driver.findElement(By.name("customerName")).sendKeys("Wei");
+// Enter user's name
+	        driver.findElement(By.name("customerName")).sendKeys("Wei");
 	    
-	    //Enter user's email address and type it again
-	    driver.findElement(By.name("email")).sendKeys("aaaa1234@gmail.com");
+// Enter user's email address and type it again
+	        driver.findElement(By.name("email")).sendKeys("aaaa1234@gmail.com");
 		driver.findElement(By.name("emailCheck")).sendKeys("aaaa1234@gmail.com");
 		
-		//Enter unexpected password and type it again
+// Enter unexpected password and type it again
 		driver.findElement(By.name("password")).sendKeys("1");
 		driver.findElement(By.name("passwordCheck")).sendKeys("1");
 		
-		//Look for the Create account button and click
+// Look for the Create account button and click
 		driver.findElement(By.id("continue-input")).click();
 		try {
 		WebElement resetPw = driver.findElement(By.id("message_error"));
@@ -61,11 +61,11 @@ public class CreateAccountTest {
 	@Test
 	public void testCreateNewAcct2(){
 		
-		//Enter user's name
-	    driver.findElement(By.name("customerName")).sendKeys("Wei");
+// Enter user's name
+	         driver.findElement(By.name("customerName")).sendKeys("Wei");
 	
-	    //Enter user's email address and type it again
-	    driver.findElement(By.name("email")).sendKeys("ghf145@gmail.com");
+// Enter user's email address and type it again
+	        driver.findElement(By.name("email")).sendKeys("ghf145@gmail.com");
 		driver.findElement(By.name("emailCheck")).sendKeys("ghf145@gmail.com");
 		
 		//Enter user's password and type it again
