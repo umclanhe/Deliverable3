@@ -19,13 +19,13 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TestPurchasing {
         
-	    WebDriver driver= new FirefoxDriver();
+	        WebDriver driver= new FirefoxDriver();
 	
 	@Before
 	public void setUp() throws Exception {
-	    driver.get("https://www.amazon.com");
-	    driver.findElement(By.linkText("Sign in")).click();
-	    driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
+	        driver.get("https://www.amazon.com");
+	        driver.findElement(By.linkText("Sign in")).click();
+	        driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
 		driver.findElement(By.id("ap_password")).sendKeys("umc6080");
 		driver.findElement(By.id("signInSubmit-input")).click();
 		
