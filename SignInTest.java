@@ -16,23 +16,23 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
     public class SignInTest {
     	
-	    WebDriver driver= new FirefoxDriver();
+	       WebDriver driver= new FirefoxDriver();
 	
 	@Before
 	public void setUp() throws Exception {
-	    driver.get("https://www.amazon.com");
-	    driver.findElement(By.linkText("Sign in")).click();
+	       driver.get("https://www.amazon.com");
+	       driver.findElement(By.linkText("Sign in")).click();
 	}
 	
-//	Given I opened the amazon website
-//  And click °∞Sign in°± button to navigate to the Sign In page
-//  When I fill in correct username, but incorrect password and click °∞sign in using our secure server°± button
-//  Then I see error message °∞There was a problem with your request°± displayed on the new page.
+// Given I opened the amazon website
+// And click ‚ÄúSign in‚Äù button to navigate to the Sign In page
+// When I fill in correct username, but incorrect password and click ‚Äúsign in using our secure server‚Äù button
+// Then I see error message ‚ÄúThere was a problem with your request‚Äù displayed on the new page.
 			
 	@Test
 	public void testBadPassword() {
 		
-		// fill in the email and password to log in
+// fill in the email and password to log in
 		
 		driver.findElement(By.id("ap_email")).sendKeys("lah135@pitt.edu");
 		driver.findElement(By.id("ap_password")).sendKeys("6080");
@@ -48,10 +48,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 		} 
 	} 
 	
-//	Given I opened the amazon website
-//  And click °∞Sign in°± button to navigate to the Sign In page
-//  When I fill in correct username, password and click °∞sign in using our secure server°± button
-//  Then I see °∞tulipsu°Øs Amazon°± displayed on the new page.
+// Given I opened the amazon website
+// And click ‚ÄúSign in‚Äù button to navigate to the Sign In page
+// When I fill in correct username, password and click ‚Äúsign in using our secure server‚Äù button
+// Then I see ‚Äútulipsu‚Äôs Amazon‚Äù displayed on the new page.
 	
 	@Test
 	public void testSuccessLogIn() {
