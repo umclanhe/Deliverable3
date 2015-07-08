@@ -14,9 +14,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestUpdateCart {
 	
-        WebDriver driver = new FirefoxDriver();
+                WebDriver driver = new FirefoxDriver();
 	
-	//Start at the home page for Amazon for each test
+// Start at the home page for Amazon for each test
 	@Before
 	public void setUp() throws Exception {
 		
@@ -37,20 +37,20 @@ public class TestUpdateCart {
 	@Test
 	public void testDeleteItem() {
 		
-		// look for the delete button and click to delete the item
+// look for the delete button and click to delete the item
 		WebElement actionLinks = driver.findElement(By.className("sc-action-links"));
 		
 		WebElement deleteLink = actionLinks.findElement(By.className("a-declarative"));
-//		WebElement deleteLink = driver.findElement(By.name("submit.delete.CGNVY44IJPDZL"));
+// WebElement deleteLink = driver.findElement(By.name("submit.delete.CGNVY44IJPDZL"));
 		deleteLink.click();
 		
 		try{
-			WebElement remItem = driver.findElement(By.className("sc-list-item-removed-msg"));
-			String st = remItem.getText();
-			assertTrue(st.contains("was removed from Shopping Cart"));
-			}catch (NoSuchElementException nseex) {
-				fail();
-			}		
+		WebElement remItem = driver.findElement(By.className("sc-list-item-removed-msg"));
+		String st = remItem.getText();
+		assertTrue(st.contains("was removed from Shopping Cart"));
+		}catch (NoSuchElementException nseex) {
+		fail();
+		}		
    }
 	
 	
@@ -61,16 +61,13 @@ public class TestUpdateCart {
 	@Test
 	public void testSaveForLaterItem(){
 	
-	//look for the Save For Later button and click to save the item in the later list.
-	WebElement actionLinks = driver.findElement(By.className("sc-action-save-for-later"));
-	
-	WebElement SaveForLaterLink = actionLinks.findElement(By.className("a-declarative"));
-//	WebElement SaveForLaterLink = driver.findElement(By.name("submit.save-for-later.C2ZA41IYVX3HX5"));	
-	SaveForLaterLink.click();
-	
-	WebElement saveItem = driver.findElement(By.className("sc-list-caption"));
-	String elementText = saveItem.getText();
-    assertTrue(elementText.contains("Saved for later"));
+// look for the Save For Later button and click to save the item in the later list.
+	       WebElement actionLinks = driver.findElement(By.className("sc-action-save-for-later"));
+	       WebElement SaveForLaterLink = actionLinks.findElement(By.className("a-declarative"));
+	       SaveForLaterLink.click();
+	       WebElement saveItem = driver.findElement(By.className("sc-list-caption"));
+	       String elementText = saveItem.getText();
+               assertTrue(elementText.contains("Saved for later"));
 }
 	
 }
